@@ -14,7 +14,12 @@ Bold: 700
 - LINE HEIGHTS
 Default: 1
 Small1: 1.05
+Medirm: 1.2
 Paragraph Default: 1.6
+
+- Letter Spacing
+0.5px
+0.75px
 
 ---02 COLORS
 - Primary: #e67e22
@@ -58,13 +63,34 @@ body {
 /* 
 -----------GENERAL REUSABLE COMPONENTS-------------
 */
-.heading-primary {
-  font-size: 5.2rem;
-  font-weight: 700;
-  line-height: 1.05;
+
+.heading-primary,
+.heading-secondary {
   color: #333;
   letter-spacing: -0.5px;
+  font-weight: 700;
+}
+
+.heading-primary {
+  font-size: 5.2rem;
+  line-height: 1.05;
   margin-bottom: 3.2rem;
+}
+
+.heading-secondary {
+  font-size: 4.4rem;
+  line-height: 1.2;
+  margin-bottom: 9.6rem;
+}
+
+.subheading {
+  display: block;
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: #cf711f;
+  text-transform: uppercase;
+  margin-bottom: 1.6rem;
+  letter-spacing: 0.75px;
 }
 
 .btn:link,
@@ -103,6 +129,21 @@ body {
 
 .margin-right-sm {
   margin-right: 1.6rem !important;
+}
+
+.container {
+  max-width: 120rem;
+  padding: 0 3.2rem;
+  margin: 0 auto;
+}
+
+.grid {
+  display: grid;
+  gap: 9.6rem;
+}
+
+.grid--2-cols {
+  grid-template-columns: repeat(2, 1fr);
 }
 
 /* 
@@ -221,4 +262,16 @@ body {
 .delivered-text span {
   color: #cf711f;
   font-weight: 700;
+}
+
+/* 
+-------------HOW IT WORKS SECTION-----------------
+*/
+
+.section-how {
+  padding: 9.6rem 0;
+}
+
+.step-img {
+  width: 50%;
 }
